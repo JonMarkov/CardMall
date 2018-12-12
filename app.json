@@ -1,0 +1,63 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/login/detLogin/detLogin",
+    "pages/home/mall/mall",
+    "pages/orderGoods/orderGoods",
+    "pages/orderGoods/rechargeOrder/rechargeOrder",
+    "pages/orderGoods/details/details",
+    "pages/home/phoneCharge/phoneCharge",
+    "pages/home/home",
+    "pages/home/commodityDet/commodityDet",
+    "pages/home/commodityDet/bindPhone/bindPhone",
+    "pages/orderGoods/bindPh/bindPh",
+    "pages/home/commodityDet/confirm/confirm",
+    "pages/classification/classification",
+    "pages/classification/goodsList/goodsList",
+    "pages/home/commodityDet/confirmSuc/confirmSuc",
+    "pages/home/chargeSuc/chargeSuc",
+    "pages/home/outWeimeng/outWeimeng",
+    "pages/orderGoods/toOrder/toOrder",
+    "pages/personalCentre/personalCentre",
+    "pages/personalCentre/modify/modify",
+    "pages/personalCentre/PayPassConfirm/PayPassConfirm",
+    "pages/personalCentre/Paypass/Paypass",
+    "pages/personalCentre/security/security"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#7a43b6",
+    "navigationBarTextStyle": "#000",
+    "navigationBarTitleText": "转多鱼"
+  },
+  "tabBar": {
+    "borderStyle": "white",
+    "color": "#bdbdbd",
+    "selectedColor": "#30b0ef",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "/images/img_home.png",
+        "selectedIconPath": "/images/img_home_selected.png"
+      },
+      {
+        "pagePath": "pages/classification/classification",
+        "text": "分类",
+        "iconPath": "/images/img_sort.png",
+        "selectedIconPath": "/images/img_sort_selected.png"
+      },
+      {
+        "pagePath": "pages/orderGoods/toOrder/toOrder",
+        "text": "订单",
+        "iconPath": "/images/img_order.png",
+        "selectedIconPath": "/images/img_order_selected.png"
+      },
+      {
+        "pagePath": "pages/personalCentre/personalCentre",
+        "text": "我的",
+        "iconPath": "/images/img_personal.png",
+        "selectedIconPath": "/images/img_personal_selected.png"
+      }
+    ]
+  }
+}

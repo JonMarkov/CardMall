@@ -1,0 +1,23 @@
+<!--pages/home/commodityDet/confirm/confirm.wxml-->
+<view class='confirm'>
+  <image src='{{picList}}'></image>
+  <view class='confirm-middle'>
+    <view class='middle-top'>
+      <!-- <text>{{new_price}}</text> -->
+      <text class='top-mon'>￥ {{new_price}}</text>
+      <text class='top-num'> X {{goods_num}}</text>
+    </view>
+    <view class='middle-bottom'>
+      <text class='bottom-title'>{{goodsName}} </text>
+      <text class='bottom-two'> {{value_name}}</text>
+    </view>
+  </view>
+  <view class='confirm-bottom'>
+    <view class='bottom-top'>
+      <!-- <text>总金额 {{zong}}</text> -->
+    </view>
+    <view class='bottom-bottom'>
+      <button bindtap='mac'>（￥{{zong}}）立即支付</button>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,89 @@
+/* pages/home/commodityDet/confirm/confirm.wxss */
+
+.confirm {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.confirm image {
+  width: 96%;
+  padding: 15rpx;
+  border-radius: 30rpx;
+}
+
+.confirm-middle {
+  padding: 20rpx;
+}
+
+.middle-top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.middle-bottom {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 20rpx;
+}
+
+.bottom-two {
+  margin-left: 30rpx;
+}
+
+.bottom-top {
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  bottom: 120rpx;
+  width: 100%;
+  margin: auto;
+}
+
+.bottom-top text {
+  margin-right: 30rpx;
+}
+
+.bottom-bottom {
+  position: absolute;
+  bottom: 10rpx;
+  width: 100%;
+  margin: auto;
+}
+
+.bottom-bottom button {
+  text-align: center;
+  width: 96%;
+  height: 100rpx;
+  font-size: 38rpx;
+  font-weight: bold;
+  background: #30b0ef;
+  color: #fff;
+}
+
+.top-mon {
+  color: #ff2727;
+  font-size: 34rpx;
+  font-weight: bold;
+}
+
+.top-num {
+  color: #333;
+  font-size: 34rpx;
+}
+
+.bottom-title {
+  color: #333;
+  font-size: 34rpx;
+  font-weight: bold;
+}
+
+.bottom-two {
+  color: #333;
+  font-size: 34rpx;
+  font-weight: bold;
+}
+
+.bottom-top {
+  font-size: 34rpx;
+}

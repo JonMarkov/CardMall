@@ -1,0 +1,22 @@
+<view class='personal-option' bindtap='rechargeOrder'>
+  <image src='../../../images/toorder.png' class='ico-arrow'></image>
+  <view class='option-last'>
+    <text class='order'>充值订单</text>
+    <view class='order-ico'>
+      <!-- <text class='order-num'>1</text> -->
+      <image src='../../../images/arrow.png' class='arrow'></image>
+    </view>
+  </view>
+</view>
+<view class='personal-option' bindtap='mallOrder'>
+  <image src='../../../images/toorde.png' class='ico-arrow'></image>
+  <view class='option-last'>
+    <text class="order">商城订单</text>
+    <view class='order-ico'>
+      <!-- <text class='order-num'>1</text> -->
+      <image src='../../../images/arrow.png' class='arrow'></image>
+    </view>
+  </view>
+</view>
+
+

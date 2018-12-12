@@ -1,0 +1,22 @@
+<view class="section">
+  <input type='text' bindinput='bindphoneNum' bindblur='bindfocusNum' name="phone" placeholder='请输入充值手机号码' class='callInput'></input>
+  <image src='../../../images/tall.png'  class='callImg'></image>
+</view>
+
+  <text class='locations'>{{locations}}</text>
+<view class='refill-title'>
+  <text>充话费</text>
+</view>
+<view class='refill-contenr'>
+  <block wx:for="{{tellNum}}" wx:key=''>
+    <view class="refill-sel {{currentTabsIndex==index?'selected':''}}" data-face="{{item.new_call}}" data-old="{{item.old_call}}" bindtap='changColor' data-index="{{index}}">
+ 
+      <image src='../../../images/iccc.png' class='subicc' wx:if="{{item.zk == '1'}}"></image>
+      <text class='refill-new' id='{{item.id}}'>{{item.old_call}}元</text>
+      <text class="refill-old {{phoneMa?'phoneM':''}}" id='{{item.id}}'>售价{{item.new_call}}元</text>
+    </view>
+  </block>
+</view>
+<view class='btn-recharge'>
+  <button bindtap='bindSubmit' data-subFace="{{phoneFace}}">{{phoneFace}} 立即充值</button>
+</view>

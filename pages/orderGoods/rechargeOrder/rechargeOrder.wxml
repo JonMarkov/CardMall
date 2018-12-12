@@ -1,0 +1,31 @@
+<view class='orderList' wx:for="{{orderList}}" wx:key="">
+  <view class='order orderNum'>
+    <text>订单编号：{{item.order_code}}</text>
+    <text>{{item.status}}</text>
+  </view>
+  <view class='order'>
+    <text>充值号码：{{item.telephone}}</text>
+  </view>
+  <view class='order'>
+    <text>运营商：{{item.operator}}</text>
+  </view>
+  <view class='order'>
+    <text>账号归属：{{item.province}}</text>
+  </view>
+  <view class='order'>
+    <text>充值金额：{{item.face_value}}</text>
+  </view>
+  <view class='order orderTotal'>
+    <text>交易金额：{{item.total}}</text>
+    <button  bindtap="submit">联系客服</button>
+  </view>
+</view>
+
+
+
+<view class="mask"  wx:if="{{showModal}}"></view>
+<view class="modalDlg" wx:if="{{showModal}}">
+    <view bindtap="makePhoneCall1">客服一： 153 4015 8751</view>
+    <view bindtap="makePhoneCall2">客服二： 153 4016 2692</view>
+    <view class="moda" bindtap='go'>客服接听时间为早9点-晚6点；点我返回</view>
+</view>

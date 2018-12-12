@@ -1,0 +1,32 @@
+/* pages/personalCentre/security/security.wxss */
+page{
+  background: #fff
+}
+.phone{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50rpx
+}
+.phoneBind{
+  font-size: 26rpx;
+  color: #c7c7c7
+}
+.phonetell{
+  margin-top: 20rpx;
+  color: #a6d7f7;
+  font-size: 34rpx
+}
+.phoneBtn{
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+.phoneBtn button{
+  width: 96%;
+  position: absolute;
+  bottom: 10rpx;
+  background: #30b0ef;
+  color: #fff
+}

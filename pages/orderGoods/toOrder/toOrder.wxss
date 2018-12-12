@@ -1,0 +1,39 @@
+.personal-option {
+  display: flex;
+  margin: auto;
+  width: 86%;
+  padding: 20rpx;
+  border-bottom: 1px solid #dfe3e6;
+  align-items: center; /*垂直居中*/
+}
+
+.arrow{
+  width: 15rpx;
+  height: 30rpx
+}
+.ico-arrow{
+  width: 50rpx;
+  height: 50rpx
+}
+
+.option-last {
+  align-items: center; /*垂直居中*/
+  display: flex;
+  width: 98%;
+  justify-content: space-between;
+}
+
+.option-last text {
+  font-size: 30rpx;
+  margin-left: 20rpx
+}
+.order-ico{
+  display: flex
+}
+.order-num{
+  color: #fff;
+  background: red;
+  width: 30rpx;
+  text-align: center;
+  border-radius: 50%
+}

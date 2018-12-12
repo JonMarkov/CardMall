@@ -1,0 +1,116 @@
+/* 此页面全局样式 */
+
+page {
+  font-family: "Microsoft YaHei";
+  background: #fff;
+}
+
+/* 输入框样式 */
+
+.section {
+  position: relative;
+  display: inline-block;
+  width: 96%;
+  margin: 16rpx;
+}
+
+input {
+  height: 80rpx;
+  line-height: 40rpx;
+  border-bottom: 1px solid #eee;
+}
+
+.section image {
+  width: 70rpx;
+  height: 70rpx;
+  padding-left: 0rpx;
+  position: absolute;
+  top: 50%;
+  right: 0px;
+  margin-top: -40rpx;
+  background: transparent;
+}
+
+/* 金额选项样式 */
+
+.refill-title {
+  width: 100%;
+  padding: 0rpx 20rpx;
+  font-size: 34rpx;
+  color: #7b7b7b;
+}
+
+.refill-contenr {
+  width: 100%;
+  margin: 16rpx;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.refill-sel {
+  width: 26%;
+  border: 1px solid #c9c9c9;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 13rpx;
+  padding: 10rpx;
+  border-radius: 10rpx;
+}
+
+.refill-new {
+  font-size: 38rpx;
+  color: #727272;
+}
+
+.refill-old {
+  font-size: 24rpx;
+  color: #cdcdcd;
+}
+
+.btn-recharge {
+  position: absolute;
+  bottom: 10rpx;
+  width: 100%;
+  margin: auto;
+}
+
+.btn-recharge button {
+  text-align: center;
+  width: 96%;
+  height: 80rpx;
+  font-size: 32rpx;
+  background: #30b0ef;
+  color: #fff;
+}
+
+.selected {
+  background: #eaf7fd;
+  border: 1px solid #37b3f0;
+}
+
+.locations {
+  font-size: 22rpx;
+  color: red;
+  width: 96%;
+  margin: 0rpx 16rpx;
+  margin-top: -20rpx;
+}
+.callImg{
+border-bottom:1px solid #eee;
+padding-bottom:11rpx;
+}
+.callInput{
+  width: 90%
+  }
+  .phoneM{
+    display: none
+  }
+.subicc{
+  width:45rpx;
+  height:45rpx;
+  position:absolute;
+  margin-left:162rpx;
+  margin-top:-8rpx;
+  border-radius:3px;  
+}

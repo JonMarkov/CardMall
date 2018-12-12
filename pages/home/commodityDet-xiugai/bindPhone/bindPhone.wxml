@@ -1,0 +1,30 @@
+<view class="container">
+  <view class="login-icon">
+    <image class="login-img" src="../../../../images/logo.jpg"></image>
+  </view>
+  <view class="login-from">
+
+    <!--账号-->
+    <view class="inputView">
+      <label class="loginLab">手机号</label>
+      <input class="inputText widthInput" bindinput='bindphoneNum' placeholder="请输入账号" />
+    </view>
+
+    <!--密码-->
+    <view class="inputView">
+      <label class="loginLab">验证码</label>
+      <input class="inputText widthInput2" bindinput='bindcodeNum' placeholder="请输入验证码" />
+      <span class="btn">
+        <!-- <button type="default" size="{{mini}}" loading="{{loading}}" plain="{{plain}}" bindtap='bindToCode'> 获取验证码 </button> -->
+
+        <button disabled='{{disabled}}' data-id="2" bindtap="bindToCode">
+          {{time}}
+        </button>
+      </span>
+    </view>
+    <!--按钮-->
+    <view class="loginBtnView">
+      <button class="loginBtn" type="primary" size="{{primarySize}}" bindtap='bindTosubmit'>绑定</button>
+    </view>
+  </view>
+</view>

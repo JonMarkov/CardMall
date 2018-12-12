@@ -1,0 +1,133 @@
+
+<view class='details-top'>
+  <image src='../../../images/details.png'></image>
+  <view class='top-title'>
+    <text>{{status}}</text>
+    <text>订单编号：{{flow_no}}</text>
+  </view>
+</view>
+<!-- middle -->
+<view class='details-middle'>
+  <view class='middle-left'>
+    <image src='{{pic_url}}'></image>
+  </view>
+  <view class='middle-right'>
+    <view class='middle-right-top'>
+      <text class='middle-right-top-title'>{{goods_name}}</text>
+      <text class='middle-right-top-adv'>{{ad_words}}</text>
+    </view>
+    <view class='middle-right-bottom'>
+      <text class='middle-right-bottom-price'>￥ {{sale_price}} </text>
+      <text class='middle-right-bottom-number'> X {{goods_num}}</text>
+    </view>
+  </view>
+</view>
+<!-- bottom -->
+<view class='details-bottom'>
+  <view class='bottom-top'>
+    <image src='../../../images/dd-ico.png'></image>
+    <text>订单信息</text>
+  </view>
+  <view class='bottom-bottom'>
+    <view class='bottom-bottom-one'>
+      <text class='one-title'>下单时间 : </text>
+      <text class='one-content'>{{create_date}}</text>
+    </view>
+    <view class='bottom-bottom-two' wx:if="{{oStatus == 1}}">
+      <text class='two-title'>支付时间 : </text>
+      <text class='two-content'>{{pay_time}}</text>
+    </view>
+    <view class='bottom-bottom-three'>
+      <text class='three-title'>订单金额 :  </text>
+      <text class='three-content'> ￥{{total}}</text>
+    </view>
+    <view class='bottom-bottom-four' wx:if="{{oStatus == 1}}">
+      <text class='four-title'>支付方式 : </text>
+      <text class='four-content'> 微信支付</text>
+    </view>
+  </view>
+</view>
+<view class="details-button-top"></view>
+<view class='details-button'>
+  <view class='details-button-bottom' wx:if="{{oStatus == 0 || oStatus == 1}}">
+    <button class='button-one' bindtap='cancellation' wx:if="{{oStatus == 0}}">取消订单</button>
+    <button class='button-four' bindtap="{{!buttonClicked?'bindToBuy':''}}" wx:if="{{oStatus == 0}}">去支付</button>
+    <button class='button-one' wx:if="{{oStatus == 1}}">申请退款</button>
+    <button class='button-two' bindtap="submit" wx:if="{{oStatus == 1}}">联系客服</button>
+    <button class='button-three' bindtap="showDialogBtn" wx:if="{{oStatus == 1}}">提取卡密</button>
+  </view>
+  <!-- 已完成状态无按钮 -->
+  <view  class="osMa" wx:if="{{oStatus == 2}}">
+    <view class='bullet-activation'>
+      <text>激活码</text>
+    </view>
+    <view class='bullet-accPass' wx:for="{{cardmineList}}">
+      <view class='acc' data-num = "{{item.cardmine}}" bindtap='copyNum'>
+        <text>卡号：{{item.card_num}}</text>
+        <text class='acc-button' >复制</text>
+      </view>
+      <view class='pass' data-mine = "{{item.cardmine}}" bindtap='copyMine'>
+        <text>卡密：{{item.cardmine}}</text>
+        <text class='pass-button'>复制</text>
+      </view>
+    </view>
+    <view class='bullet-instructions'>
+      <text>源码有效期至：2018年9月28日，尽快使用，以免过期失效</text>
+    </view>
+  </view>
+</view>
+
+<!-- kefu -->
+<view class="mask"  wx:if="{{kefuShow}}"></view>
+<view class="modalDlg" wx:if="{{kefuShow}}">
+    <view bindtap="makePhoneCall1">客服一： 153 4015 8751</view>
+    <view bindtap="makePhoneCall2">客服二： 153 4016 2692</view>
+    <view class="moda" bindtap='go'>客服接听时间为早9点-晚6点；点我返回</view>
+</view>
+
+<modal wx:if="{{showCode}}" title="验证" confirm-text="提交" cancel-text="取消" bindcancel="cancel" bindconfirm="confirmSuc">
+  <view class="login-container">
+    <view class="section-container">
+      <view class="common-text">手机号</view>
+      <input class="common-input" maxlength="11" type="number" value='{{user_phone}}' />
+    </view>
+    <view class="section-container">
+      <view class="common-text">验证码 </view>
+      <input class="common-input" bindinput='codePhoneNum' type="text" placeholder="请输入验证码" />
+    </view>
+    <view class="btn-area">
+      <button disabled='{{disabled}}' class="btn" type="default" bindtap='codeObtain'>{{time}}</button>
+
+    </view>
+    <label wx:if="{{err}}">请输入正确的验证码</label>
+  </view>
+</modal>
+
+
+<view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+<view class="modal-dialog" wx:if="{{showModal}}">
+  <view class="bullet-title">
+    <text class='title-head'>腾讯视频卡黄金vip会员卡</text>
+  </view>
+  <view class='bullet-activation'>
+    <text>激活码</text>
+  </view>
+  <view class='bullet-accPass' wx:for='{{card}}' wx:key="">
+    <view class='acc' data-num = "{{item.cardmine}}" bindtap='copyNum'>
+      <text>卡号：{{item.card_num}}</text>
+      <text class='acc-button'>复制</text>
+    </view>
+    <view class='pass' data-mine = "{{item.cardmine}}" bindtap='copyMine'>
+      <text>卡密：{{item.cardmine}}</text>
+      <text class='pass-button'>复制</text>
+    </view>
+  </view>
+  <view class='bullet-instructions'>
+    <text>源码有效期至：2018年9月28日，尽快使用，以免过期失效</text>
+  </view>
+
+  <view class="modal-footer">
+    <view class="btn-cancel" bindtap="onCancel" data-status="cancel">取消</view>
+    <view class="btn-confirm" bindtap="onConfirm" data-status="confirm">确定</view>
+  </view>
+</view>

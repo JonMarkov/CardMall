@@ -1,0 +1,11 @@
+<view class='phone'>
+  <image src='../../../images/phoneImg.png'></image>
+  <text class='phoneBind' wx:if="{{userPhone ==''}}">未绑定手机号码</text>
+  <text class='phoneBind' wx:if="{{userPhone !=''}}">已绑定手机号码</text>
+  <text class='phonetell' wx:if="{{userPhone !=''}}">{{userPhone}}</text>
+</view>
+<view class='phoneBtn'>
+  <button wx:if="{{userPhone==''}}" bindtap='bindPh'>去绑定手机号</button>
+  <button wx:if="{{set_pay_pwd == 0 && userPhone !=''}}" bindtap='bindPass'>设置支付密码</button>
+  <button wx:if="{{set_pay_pwd == 1 && userPhone !=''}}" bindtap='bindModify'>修改支付密码</button>
+</view>
